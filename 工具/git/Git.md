@@ -1,9 +1,10 @@
 
 ## Git指南
+
     1、Git是分布式版本管理工具，最初由Linus用C写成来管理Linux源码，其他竞争对手有：BitKeeper、Mercurial、Bazaar
        集中式管理系统有：CVS、SVN（比CVS更稳定）、IBM的ClearCase、微软的VSS
        
-       git管理的是“修改”而不是文件本身（二进制文件除外），类似MySQl中binlog的statement和row模式，而SVN是管理的“文件”，直接存储不同版本的文件
+       git管理的是“修改”而不是文件本身（二进制文件除外），类似MySQL中binlog的statement和row模式，而SVN是管理的“文件”，直接存储不同版本的文件
        
     2、安装后添加全局配置：$ git config --global user.name "Your Name"
                         $ git config --global user.email "email@example.com"
