@@ -9,6 +9,9 @@
     把对象之间的依赖关系用配置文件来管理
 
 
+### Spring中最核心的两个类
+    DefaultListableBeanFactory (XmlBeanFactory)
+    XmlBeanDefinitionReader
 
 
 为了区分在 Spring 内部对象的传递和转化过程中，对对象的数据访问所做的限制。
@@ -32,3 +35,19 @@ Context 是把资源的加载、解析和描述工作委托给了 ResourcePatter
 他们分别是在构建 BeanFactory 和构建 Bean 对象时调用。还有就是 InitializingBean 和 DisposableBean， 
 他们分别是在 Bean 实例创建和销毁时被调用。用户可以实现这些接口中定义的方法，Spring 就会在适当的时候调用他们。
 还有一个是 FactoryBean 他是个特殊的 Bean，这个 Bean 可以被用户更多的控制
+
+
+### Maven怎么引入Spring??
+    在普通java工程使用spring框架，只要一个需要即可
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>4.3.29.RELEASE</version>
+    </dependency>
+    
+    在web工程中引入Spring MVC，也额外引用
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>4.3.29.RELEASE</version>
+    </dependency>
