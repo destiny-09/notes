@@ -12,7 +12,10 @@
 ### Spring中最核心的两个类
     DefaultListableBeanFactory (XmlBeanFactory)
     XmlBeanDefinitionReader
-
+    
+    XmlBeanDefinitionReader里主要方法：doLoadBeanDefinitions
+    // 1、根据xml的inputSource加载为Document对象：用到DefaultDocumentLoader，ResourceEntityResolver(DelegatingEntityResolver)
+    // 2、根据Document对象注册为BeanDefinitions：用到DefaultBeanDefinitionDocumentReader
 
 为了区分在 Spring 内部对象的传递和转化过程中，对对象的数据访问所做的限制。
 例如 ListableBeanFactory 接口表示这些 Bean 是可列表的，而 HierarchicalBeanFactory 表示的这些 Bean 是有继承关系的，
@@ -45,7 +48,7 @@ Context 是把资源的加载、解析和描述工作委托给了 ResourcePatter
         <version>4.3.29.RELEASE</version>
     </dependency>
     
-    在web工程中引入Spring MVC，也额外引用
+    在web工程中引入Spring MVC
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
