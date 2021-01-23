@@ -26,6 +26,14 @@ singletonObjects是一个Map，用来存放所有创建好的单例Bean（多例
 BeanFactoryPostProcessor和BeanPostProcessor，前者是用来干预BeanFactory的创建过程，后者是用来干预Bean的创建过程。
 后置处理器的作用十分重要，bean的创建以及AOP的实现全部依赖后置处理器。
 
+请参阅PropertyResourceConfigurer及其具体实现，了解解决此类配置需求的开箱即用解决方案。BeanFactoryPostProcessor可能与bean定义交互并修改，但永远不应该将bean实例化。 这样做可能会导致过早的bean实例化，违反容器执行顺序并导致意想不到的副作用。如果需要bean实例交互，请考虑实现BeanPostProcessor接口。
+
+postProcessBeanFactory方法在BeanFactory初始化后，所有的bean定义都被加载，但是没有bean会被实例化时，允许重写或添加属性。
+
+
+
+
+
 ### ApplicationContext与BeanFactory区别？ BeanFactory与FactoryBean区别？
 基本可以理解为：ApplicationContext = BeanFactory + Resources
 初始化Bean的时机不同，BeanFactory一般是等到需要用时才创建，而ApplicationContext是在容器创建时就初始化singleton的Bean。
