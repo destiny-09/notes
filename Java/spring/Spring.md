@@ -54,3 +54,12 @@ Context 是把资源的加载、解析和描述工作委托给了 ResourcePatter
         <artifactId>spring-webmvc</artifactId>
         <version>4.3.29.RELEASE</version>
     </dependency>
+    
+## Spring源码常用单词
+Delegate	委派
+Candidate	候选者
+Pluggable	可插拔式
+Extractor	抽出器，提取器
+
+decorate	装饰
+canonical	最简洁的
