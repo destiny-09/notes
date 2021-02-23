@@ -31,7 +31,7 @@ BeanFactoryPostProcessor和BeanPostProcessor，前者是用来干预BeanFactory�
 postProcessBeanFactory方法在BeanFactory初始化后，所有的bean定义都被加载，但是没有bean会被实例化时，允许重写或添加属性。
 
 
-
+AutowiedAnnotationBeanPostProcessor 处理 @Autowired
 
 
 ### ApplicationContext与BeanFactory区别？ BeanFactory与FactoryBean区别？
