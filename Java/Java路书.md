@@ -13,7 +13,7 @@ InheritableThreadLocal
 
 
 ### 性能优化
-性能指标有哪些 -- QPS、TPS、PV、UV
+性能指标有哪些 -- QPS、TPS、PV、UV  28原则，80%的请求在20%时间到达 峰值QPS = (PV * 80%) / (60 * 60 * 24 * 20%) 
 如何发现性能瓶颈 -- IO/CPU，内存，GC，延迟
 性能调优的常见手段 -- JVM调优，MySQL调优，缓存
 说说你在项目中如何进行性能调优 -- ParNew+CMS，-Xms-Xmx大小相等，NewRatio=3；MySQL索引优化，数据结果集限制
