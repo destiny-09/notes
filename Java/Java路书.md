@@ -11,6 +11,10 @@ C4模型：类似地图定位的缩放，从全貌到细节
 
 InheritableThreadLocal
 
+mysql redis mq
+
+dubbo/jsf mongo es 
+
 
 ### 性能优化
 性能指标有哪些 -- QPS、TPS、PV、UV  28原则，80%的请求在20%时间到达 峰值QPS = (PV * 80%) / (60 * 60 * 24 * 20%) 
