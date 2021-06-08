@@ -16,6 +16,10 @@ mysql redis mq
 dubbo/jsf mongo es 
 
 
+所谓 functional interface，简单说就是只有一个抽象方法的接口
+对象和抽象类是is a 的关系，对象和接口是 like this的关系。
+从接口的命名一般是able ability后缀表示一种能力。
+
 ### 性能优化
 性能指标有哪些 -- QPS、TPS、PV、UV  28原则，80%的请求在20%时间到达 峰值QPS = (PV * 80%) / (60 * 60 * 24 * 20%) 
 如何发现性能瓶颈 -- IO/CPU，内存，GC，延迟
