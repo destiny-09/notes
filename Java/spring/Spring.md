@@ -1,4 +1,10 @@
 
+## 各版本主要功能
+    spring 2.5  2007发布  支持注解
+    spring 3.0  2009发布  完全利用了Java5的改进，为JEE6提供了支持
+    spring 4.0  2013发布  支持Java8
+    spring 5.0  2017发布  基于JDK8开发，Reactive响应式编程模型，webflux模块
+
 ## 核心四包
     core、beans、context、expression（aop）
     
