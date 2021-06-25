@@ -2,16 +2,15 @@
 ## Redis定义
     Redis本质上是一个Key-Value类型的内存数据库，很像Memcached（但Redis支持持久化），
     整个数据库系统加载在内存当中进行操作，定期通过异步操作把数据（快照）flush到硬盘上进行保存（RDB或者操作日志AOF），
-    因为是纯内存操作，Redis的性能非常出色，最高每秒10万次读写操作，是已知性能最快的Key-Value DB（单线程、NIO）。
-
-    Redis的出色之处不仅仅是性能，Redis最大的魅力是支持保存多种数据结构，此外单个value的最大限制是512M，
-    而Memcached只能保存1MB的数据（Memcached目前还不能支持持久化，掉电会导致数据丢失）。
     
-    因此Redis可以用来实现很多有用的功能，比方说用他的list来做FIFO双向链表，实现一个轻量级的高性能消息队列服务，用他的Set可以做高性能的tag系统等等。
-    另外Redis也可以对存入的Key-Value设置expire时间，因此也可以被当作一个功能加强版的Memcached来用。
-
-    Redis的主要缺点是数据库容量受到物理内存的限制，不能用作海量数据的高性能读写，
-    因此Redis适合的场景主要局限在较小数据量的高性能操作和运算上（可以搭建分布式Redis集群）。
+    Redis的主要缺点是数据库容量受到物理内存的限制，不能用作海量数据的高性能读写。
+    
+## Redis特点
+   1、支持持久化（AOF, RDB）
+   2、不仅支持key-value，还提供多种数据结构，list/set/zset/hash
+   3、支持主从，客户端集群，服务器集群
+   4、读写性能高，读11w/s，写8w/s（纯内存操作）
+   5、单个value的最大限制是512M，而Memcached只能保存1MB的数据
 
 ### Redis是单进程单线程的（单线程处理I/O）
     Redis利用队列技术将并发访问变为串行访问，消除了传统数据库并行控制的开销（锁和同步的开销）。
@@ -67,6 +66,7 @@
    * zset：
           压缩列表，单数据小于64Byte，元素个数小于128时使用
           跳表+哈希表
+   * HyperLogLog、Geo、Pub/Sub
 ```
 struct sdshdr{
      // 记录buf数组中已使用字节的数量
@@ -85,3 +85,4 @@ struct sdshdr{
     Redis采用第一种，这样持久化方便但恢复的时候麻烦，类比JavaAPI的数据结构类也是采用第一次方式
     
     
+Redis Module：BloomFilter、RedisSearch、Redis-ML
