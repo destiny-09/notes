@@ -15,6 +15,12 @@ mysql redis mq
 
 dubbo/jsf mongo es 
 
+【典型系统】
+1、秒杀系统
+2、推荐系统
+3、IM系统
+4、微博系统
+
 
 所谓 functional interface，简单说就是只有一个抽象方法的接口
 对象和抽象类是is a 的关系，对象和接口是 like this的关系。
