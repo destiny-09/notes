@@ -20,6 +20,7 @@ dubbo/jsf mongo es
 2、推荐系统
 3、IM系统
 4、微博系统
+5、搜索系统
 
 
 所谓 functional interface，简单说就是只有一个抽象方法的接口
