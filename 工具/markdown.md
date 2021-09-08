@@ -57,7 +57,11 @@ sdf
  System.out.println("ffffffff");
 ```
 
-##7、表格 有点麻烦
+##7、表格 
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
 
 ##8、强调 换行
 _倾斜字体_  
