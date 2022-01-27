@@ -11,6 +11,16 @@
 3、客户端的收和服务端的发合并成一个，就是：sync k, ack j+1, 这样就是三次握手。
 
 ## 第三次握手丢包情况？
-第三次握手中的ACK包丢失的情况下，Client向server端发送数据，Server端将以RST包响应。
+第三次握手中的ACK包丢失的情况下，Client向server端发送数据，Server端将以RST包响应。（https://blog.csdn.net/yrx420909/article/details/104483455）
 
 ## 为什么四次挥手？
+
+
+
+
+## Socket简称
+SYN：建立连接
+FIN：关闭连接
+ACK：响应
+PSH：有DATA数据传输
+RST：连接重置

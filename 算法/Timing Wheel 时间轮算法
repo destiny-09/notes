@@ -1,0 +1,6 @@
+
+## Timing Wheel 时间轮算法
+
+操作系统和网络协议栈超时重传中，面临管理和维护大量的timer调度的问题
+
+论文：<Hashed and Hierarchical Timing Wheels: data structures to efficiently implement a timer facility>
